@@ -1,0 +1,153 @@
+:root {
+  --bg: #f6f7f9;
+  --panel: #ffffff;
+  --border: #d9dde3;
+  --text: #1f2933;
+  --muted: #6b7785;
+  --accent: #1d6f5f;
+  --danger: #b42318;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 200px;
+  background: #13322c;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+}
+
+.sidebar .brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 20px 16px;
+}
+
+.sidebar a {
+  color: #c9d6d2;
+  text-decoration: none;
+  padding: 8px 20px;
+}
+
+.sidebar a.router-link-exact-active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.content {
+  flex: 1;
+  padding: 24px 32px;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--text);
+}
+
+button {
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tfoot td {
+  font-weight: 700;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.muted {
+  color: var(--muted);
+}
